@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@100;200;300;400;500;600;700&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --color-main: #209CEE;
+    --color-main-grey: lightgrey;
+    --color-navbar-grey: grey;
+    --plain-text-color: black;
+    --plain-text-color-invert: white;
+    --color-toggler: transparent;
+    --navbar-color: rgba(242, 242, 242, 1);
+    --about-me-text-color: brown;
+    --button-hover-grey: darkgrey;
+}
+
+[data-theme='dark'] {
+    --plain-text-color: white;
+    --plain-text-color-invert: black;
+    --color-navbar-grey: lightgrey;
+    --color-toggler: rgba(255, 255, 255, 0.9);
+    --navbar-color: rgba(64, 64, 64, 1);
+    --about-me-text-color: lightgoldenrodyellow;
+    --button-hover-grey: lightgrey;
+} 
+
+body {
+    font-family: Arima, sans-serif;
+    background-image: url(../src/assets/dot-grid.png);
+    transition: all 0.5s;
+}
+
+.bg {
+    background-image: url(../src/assets/dot-grid-dark.png);
+}
+
+html,
+body {
+    min-height: 100vh;
+    height: 100%;
+}
+
+#root {
+    height: 100%;
+}
+
+.section_title {
+    padding: auto;
+    text-align: center;
+    font-size: 5rem;
+    font-weight: 600;
+    width: 100%;
+    color: var(--about-me-text-color);
+}
+
+@media screen and (max-width: 800px) {
+    .section_title {
+        font-size: 4rem;
+    }
+}

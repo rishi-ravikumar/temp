@@ -1,0 +1,73 @@
+.logo {
+    width: 3rem;
+}
+
+.navbar {
+    width: 100vw;
+    position: fixed; 
+    top: 0;
+    transition: top 0.3s;
+    z-index: 5000;
+}
+
+/* .navbar-toggler {
+    width: max-content;
+} */
+
+.remaining_name {
+    margin-left: -1rem;
+    font-weight: 700;
+    font-family:'Arima', sans-serif;
+    font-style: italic;
+    color: var(--plain-text-color);
+}
+
+.remaining_name_dark {
+    color: white;
+}
+
+.main_name{
+    padding: 0.3rem;
+    border-radius: 1rem;
+}
+
+.main_name:hover {
+    background-color: var(--color-main-grey);
+}
+
+.nav-item {
+    font-weight: 600;
+    font-size: larger;
+    border-radius: 1rem;
+    text-align: center;
+    color: var(--color-navbar-grey)!important;
+    display: inline-block;
+    position: relative;
+}
+
+
+.navbar-toggler {
+    background-color: var(--color-toggler);
+}
+
+.active {
+    color: var(--plain-text-color)!important;
+}
+  
+.nav-item:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 0.2rem;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color-main);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+  
+.nav-item:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}

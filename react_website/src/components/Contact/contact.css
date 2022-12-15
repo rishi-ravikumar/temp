@@ -1,0 +1,72 @@
+.form {
+    position: absolute;
+    top: 240%;
+    width: 50%;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    text-align: center;
+    /* height: 200rem; */
+}
+
+.padding {
+  height: 10rem;
+  position: absolute;
+  top: 228%;
+}
+
+#contact {
+  background-color: red;
+}
+
+.label {
+    margin-right: 2rem;
+}
+
+input[type=text], textarea {
+    width: 100%; 
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px;
+    resize: vertical 
+  }
+  
+  /* Style the submit button with a specific background color etc */
+  input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* When moving the mouse over the submit button, add a darker green color */
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+
+  .contact_form {
+    font-size: larger;
+    color: var(--plain-text-color);
+  }
+
+  @media screen and (max-width: 800px) {
+    .form {
+      top: 300%;
+      width: 80%;
+    }
+
+  }
+
+  @media screen and (max-width: 400px) {
+    .form {
+      top: 330%;
+      width: 80%;
+    }
+
+  }

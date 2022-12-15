@@ -1,0 +1,74 @@
+var row 3;
+var col 0;
+set_led_matrix row col 7 0 0;
+
+var rw 7;
+var cm 4;
+set_led_matrix rw cm 0 0 7;
+
+var lcd_cell 0;
+
+var delay 1000;
+var str_delay 1000;
+
+while_true;
+
+    on_button_press f;
+        set_led_matrix row col 0 0 0;
+        add row 1;
+        while_true;
+            if row = 8;
+                break;
+            endif;
+            set_led_matrix row col 7 0 0;
+            delay_inst 9999;
+            set_led_matrix row col 0 0 0;
+            add row 1;
+        endwhiletrue;
+        if col = 4;
+            play_note c 6 5;
+            add str_delay -50;
+
+            set_lcd_val lcd_cell 1;
+            add lcd_cell 1;
+            if lcd_cell = 80;
+                play_note c 9 5;
+                change lcd_cell 0;
+            endif;
+        endif;
+        if col != 4;
+            play_note c 2 5;
+
+            set_lcd_val lcd_cell 0;
+            add lcd_cell 1;
+            if lcd_cell = 80;
+                play_note c 9 5;
+                change lcd_cell 0;
+            endif;
+
+        endif;
+        change row 3;
+        change col 0;
+        
+    endobp;
+
+    on_button_press b;
+        set_led_matrix row col 0 0 0;
+        change str_delay 1000;
+        change row 3;
+        change col 0;
+    endobp;
+
+
+    if delay = 0;
+        set_led_matrix row col 0 0 0;
+        add col 1;
+        if col = 8;
+            change col 0;
+        endif;
+        set_led_matrix row col 7 0 0;
+        change delay str_delay;
+    endif;
+    add delay -1;
+endwhiletrue;
+

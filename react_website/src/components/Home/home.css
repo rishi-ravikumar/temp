@@ -1,0 +1,138 @@
+.changing_text {
+    display: inline;
+}
+
+.home {
+    margin-top: 4rem;
+    /* clear: both; */
+}
+
+.animated_name {
+    text-transform: uppercase;
+    background-image: linear-gradient(to right, #00f260, #f79d00, #0575e6, #64f38c);
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-weight: 900;
+    color: transparent;
+    font-size: 5rem;
+    background-size: 300%;
+    background-position: -100%;
+    animation: animated_gradient 5s infinite alternate-reverse;
+}
+
+@keyframes animated_gradient {
+    to {
+        background-position: 100%;
+    }
+}
+
+.typewriter {
+    margin-left: 0.3rem;
+    /* color: var(--color-main); */
+    /* color:rgb(235, 191, 133); */
+    color:rgb(237, 172, 87);
+    font-weight: 900;
+    text-decoration: underline;
+    font-size: 3rem;
+}
+
+.cursor {
+    color: #FF9800;
+    font-size: 4rem;
+}
+
+.main_text {
+    text-align: center;
+}
+
+.iam {
+    color: var(--plain-text-color);
+    font-weight: 900;
+    font-size: 4rem;
+}
+
+.main_text {
+    /* margin: auto; */
+    width: fit-content;
+    /* left: auto; */
+    position:absolute;
+    left:0;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;
+    top: 25%;
+    position: absolute;
+}
+
+.mouse_container {
+    margin: auto;
+    width: fit-content;
+    /* margin-top: 13vh; */
+    /* vertical-align: bottom; */
+    /* margin: auto; */
+    bottom: 2rem;
+    left: 50%;
+    position: absolute;
+}
+
+.mousey {
+    width: 3px;
+    padding: 10px 15px;
+    height: 35px;
+    border: 2px solid var(--plain-text-color);
+    border-radius: 25px;
+    opacity: 0.75;
+    box-sizing: content-box;
+}
+
+.scroller {
+    width: 3px;
+    height: 10px;
+    border-radius: 25%;
+    background-color: var(--plain-text-color);
+    animation-name: scroll;
+    animation-duration: 2.2s;
+    animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+    animation-iteration-count: infinite;
+}
+@keyframes scroll {
+    0% { opacity: 0; }
+    10% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(15px); opacity: 0;}
+}
+
+@media screen and (max-width: 600px) {
+    .animated_name {
+        font-size: 4rem;
+    }
+    
+    .typewriter {
+        font-size: 2rem;
+    }
+    
+    .cursor {
+        font-size: 3rem;
+    }
+    
+    .iam {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .animated_name {
+        font-size: 3rem;
+    }
+    
+    .typewriter {
+        font-size: 1rem;
+    }
+    
+    .cursor {
+        font-size: 2rem;
+    }
+    
+    .iam {
+        font-size: 2rem;
+    }
+}
